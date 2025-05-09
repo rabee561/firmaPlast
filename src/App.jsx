@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Products from './components/pages/Products/Prodects';
 import Home from './components/pages/Home/Home';
@@ -15,11 +10,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/" element={<Home />} /> {/* إضافة هذا السطر */}
           <Route path="/products" element={<Products />} />
-          <Route path="/home" element={<Home />} />
           <Route path="/customer-reviews" element={<Customer_reviews />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </>
